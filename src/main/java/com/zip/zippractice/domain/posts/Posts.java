@@ -1,5 +1,6 @@
 package com.zip.zippractice.domain.posts;
 
+import com.zip.zippractice.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor
 @Entity // 테이블과 링크될 클래스임을 알려줌
-public class Posts {
+public class Posts extends BaseTimeEntity {
     @Id // 테이블의 PK 필드
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
